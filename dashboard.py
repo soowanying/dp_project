@@ -86,6 +86,8 @@ with tab_customers:
     with col12:
         st.metric('Total Orders', getOne_query(queries.queryT4, conn))
         
+
+            
     col21, col22 = st.columns(2)
     with col21:
         st.subheader('Type of Customers', divider='violet')
@@ -106,7 +108,7 @@ with tab_customers:
         
     col31, col32 = st.columns(2)
     with col31:
-        st.subheader('List of Recurring Customers', divider='violet')
+        st.subheader('Total spent by Customer', divider='violet')
         with st.expander('See whole table'):
             
             df2 = getMany_query(queries.queryT26, conn)
@@ -115,14 +117,14 @@ with tab_customers:
             else:
                 st.table(df2)
     with col32:
-        st.subheader('Products and Their Price Category', divider='violet')
+        st.subheader('List of Recurring Customer', divider='violet')
         with st.expander('See whole table'):
             
             df3 = getMany_query(queries.queryT25, conn)
             if df3.empty:
                 st.write('No data, please insert query in queries.py')
             else:
-                st.table(df3)
+                st.table(df3)
 
 # ---------------------------------------------- Tab 3 ----------------------------------------------
 

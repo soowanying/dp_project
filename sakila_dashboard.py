@@ -178,7 +178,7 @@ with tab_staff:
 
     col21, col22= st.columns(2)
     with col21:
-        st.subheader('Number of Rentals by Staff')
+        st.subheader('Customer Count by Staff')
         df3 = getMany_query(sakila_queries.queryQ4, conn)
         if df.empty:
             st.write('No data, please insert query in sakila_queries.py')
@@ -191,7 +191,7 @@ with tab_staff:
         if df.empty:
             st.write('No data, please insert query in sakila_queries.py')
         else:
-            st.table(df4)
+            st.table(df4)
 
 # ---------------------------------------------- Tab 3 ----------------------------------------------
 

@@ -309,7 +309,7 @@ with tab_orders:
     if df.empty:
         st.write('No data, please insert query in queries.py')
     else:
-        st.line_chart(df.head(10), y='total_sales', x='product_name', height=500, color='#FFC1EE')
+        st.bar_chart(df.head(10), y='total_sales', x='product_name', height=500, color='#FFC1EE')
         show_more = st.button('Show More Rows')
         if show_more:
             st.table(df[10:])
